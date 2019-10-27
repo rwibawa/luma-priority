@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "14b061eb-07f6-4743-ba83-3dc69c5346b9",
+		"name": "luma-priority",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_patients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_add-a-patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"784e9fb0-2c31-416f-b7fc-d29fbf0cf657\",\n    \"name\": \"Adolphus Hettinger\",\n    \"location\": {\n        \"latitude\": \"-87.1572\",\n        \"longitude\": \"-60.8946\"\n    },\n    \"age\": 48,\n    \"acceptedOffers\": 44,\n    \"canceledOffers\": 53,\n    \"averageReplyTime\": 560\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put_update-a-patient-name",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ryan Hettinger\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patients/784e9fb0-2c31-416f-b7fc-d29fbf0cf657",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patients",
+						"784e9fb0-2c31-416f-b7fc-d29fbf0cf657"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_a_patient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_a_patient",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patients/784e9fb0-2c31-416f-b7fc-d29fbf0cf657",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patients",
+						"784e9fb0-2c31-416f-b7fc-d29fbf0cf657"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_upload-patients-file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "patients",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patients/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patients",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_score-patients-based-on-location",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"latitude\": \"46.7110\",\n    \"longitude\": \"-63.1150\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patients/scored",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patients",
+						"scored"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_check-patient-scores-based-on-location",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"facilityLocation\": {\n\t    \"latitude\": \"46.7110\",\n\t    \"longitude\": \"-63.1150\"\n\t},\n\t\"patients\": [\n\t{\n        \"id\": \"182b8737-9bdd-4d9f-9c45-20c0ad9fc53e\",\n        \"name\": \"Justina Kirlin II\",\n        \"location\": {\n            \"latitude\": \"88.4664\",\n            \"longitude\": \"-126.7506\"\n        },\n        \"age\": 36,\n        \"acceptedOffers\": 1,\n        \"canceledOffers\": 0,\n        \"averageReplyTime\": 200\n    },\n    {\n        \"id\": \"1db3e82f-9a2f-4c58-8c29-a152e7d312a6\",\n        \"name\": \"Tyrell Herzog\",\n        \"location\": {\n            \"latitude\": \"-78.1067\",\n            \"longitude\": \"-54.6225\"\n        },\n        \"age\": 47,\n        \"acceptedOffers\": 95,\n        \"canceledOffers\": 5,\n        \"averageReplyTime\": 3513\n    },\n    {\n        \"id\": \"36064735-9a7e-47da-a27f-859d5fca1f6d\",\n        \"name\": \"Henri Larkin\",\n        \"location\": {\n            \"latitude\": \"-58.2444\",\n            \"longitude\": \"74.2909\"\n        },\n        \"age\": 57,\n        \"acceptedOffers\": 3,\n        \"canceledOffers\": 1,\n        \"averageReplyTime\": 150\n    },\n    {\n        \"id\": \"9e9f877a-bee3-47ed-a62e-597bf09ff44c\",\n        \"name\": \"Yolanda Hansen\",\n        \"location\": {\n            \"latitude\": \"72.3571\",\n            \"longitude\": \"31.4328\"\n        },\n        \"age\": 56,\n        \"acceptedOffers\": 84,\n        \"canceledOffers\": 92,\n        \"averageReplyTime\": 1420\n    },\n    {\n        \"id\": \"541748d9-0854-4243-b929-eadbfaf4ef67\",\n        \"name\": \"Clarissa Kessler DDS\",\n        \"location\": {\n            \"latitude\": \"-30.0530\",\n            \"longitude\": \"-14.3924\"\n        },\n        \"age\": 82,\n        \"acceptedOffers\": 32,\n        \"canceledOffers\": 9,\n        \"averageReplyTime\": 1609\n    },\n    {\n        \"id\": \"6f78459a-178e-4ee7-a555-179dafdc5523\",\n        \"name\": \"Arlene Tremblay\",\n        \"location\": {\n            \"latitude\": \"38.3036\",\n            \"longitude\": \"150.0220\"\n        },\n        \"age\": 33,\n        \"acceptedOffers\": 78,\n        \"canceledOffers\": 67,\n        \"averageReplyTime\": 219\n    },\n    {\n        \"id\": \"a6dd54ac-fcc6-4205-a5c7-34cf32d2c2bf\",\n        \"name\": \"Boyd Schmidt\",\n        \"location\": {\n            \"latitude\": \"87.4712\",\n            \"longitude\": \"-109.1781\"\n        },\n        \"age\": 58,\n        \"acceptedOffers\": 1,\n        \"canceledOffers\": 2,\n        \"averageReplyTime\": 120\n    }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/patients/checkScores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"patients",
+						"checkScores"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

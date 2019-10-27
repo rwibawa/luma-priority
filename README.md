@@ -202,6 +202,9 @@ curl -X POST \
 ### UI (folder `src/`)
   UI is not developed yet.
 
+### VSCode Debugger
+![NPM Debug](docs/NPM\ Debug.jpg)
+
 ## Enhancement Recommendations
 ### 1. Setting configuration.
 The luma-priority library needs configuration file in order to optimize the settings.
