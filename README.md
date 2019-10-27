@@ -206,3 +206,12 @@ To make it production ready, it requires Continuous Integration/Continuous Devel
 
 ### 3. Persistence layer.
 This is only a prototype. The production data should be managed in database.
+
+## git config
+```bash
+$ git remote -v
+heroku	https://git.heroku.com/luma-priority.git (fetch)
+heroku	https://git.heroku.com/luma-priority.git (push)
+origin	https://github.com/lumahealthhq/full-stack-interview.git (fetch)
+origin	https://github.com/lumahealthhq/full-stack-interview.git (push)
+```
