@@ -26,8 +26,8 @@
     "url": "https://github.com/lumahealthhq/luma-priority/issues"
   },
   "devDependencies": {
-    "chai": "^1.8.1",
-    "mocha": "^1.16.2"
+    "chai": "*",
+    "mocha": "*"
   },
   "dependencies": {
     "binary-search-insert": "^1.0.3",

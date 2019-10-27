@@ -86,7 +86,7 @@ Usage:
 $ npm install
 $ npm run server
 
-> luma@0.1.0 server /home/ryan/Documents/workspaces/workspace_nodejs/full-stack-interview
+> luma@0.1.0 server /home/ryan/Documents/workspaces/workspace_nodejs/luma-priority
 > node server.js
 
 API is running on port 3000
@@ -100,11 +100,16 @@ I used the TDD (Test Driven Development) methodology. The set of unit tests were
 
 Run the unit tests:
 ```bash
-/workspaces/full-stack-interview$ cd lib/
-/workspaces/full-stack-interview/lib$ npm install
-/workspaces/full-stack-interview/lib$ npm test
+/workspaces/luma-priority$ cd lib/
+/workspaces/luma-priority/lib$ npm install
 
-> luma-priority@0.1.0 test /workspaces/workspace_nodejs/full-stack-interview/lib
+# Run mocha
+/workspaces/luma-priority$ ./node_modules/mocha/bin/mocha
+
+# or use the 'npm' command
+/workspaces/luma-priority/lib$ npm test
+
+> luma-priority@0.1.0 test /workspaces/workspace_nodejs/luma-priority/lib
 > mocha --reporter spec
 
   #luma_priority
@@ -159,12 +164,12 @@ Get the collection of API calls from
 The API is also available at [https://luma-priority.herokuapp.com/api/v1](https://luma-priority.herokuapp.com/api/v1)
 
 #### 1. Populate the patients data
-Upload the `lib/test/patients.json` file:
+Upload the `lib/test/patients.json` file (it was generated with faker.js):
 ```bash
 $ curl -X POST \
   http://localhost:3000/api/v1/patients/upload \
   -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
-  -F patients=@$HOME/workspaces/full-stack-interview/lib/test/patients.json
+  -F patients=@$HOME/workspaces/luma-priority/lib/test/patients.json
 ```
 
 #### 2. Get the top 10 scored patients
@@ -212,6 +217,6 @@ This is only a prototype. The production data should be managed in database.
 $ git remote -v
 heroku	https://git.heroku.com/luma-priority.git (fetch)
 heroku	https://git.heroku.com/luma-priority.git (push)
-origin	https://github.com/lumahealthhq/full-stack-interview.git (fetch)
-origin	https://github.com/lumahealthhq/full-stack-interview.git (push)
+origin	https://github.com/lumahealthhq/luma-priority.git (fetch)
+origin	https://github.com/lumahealthhq/luma-priority.git (push)
 ```
