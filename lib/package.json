@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/lumahealthhq/luma-priority.git"
+    "url": "git://github.com/rwibawa/luma-priority.git"
   },
   "keywords": [
     "escape",
@@ -19,11 +19,11 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/lumahealthhq/luma-priority/blob/master/LICENSE-MIT"
+      "url": "https://github.com/rwibawa/luma-priority/blob/master/lib/LICENSE-MIT"
     }
   ],
   "bugs": {
-    "url": "https://github.com/lumahealthhq/luma-priority/issues"
+    "url": "https://github.com/rwibawa/luma-priority/issues"
   },
   "devDependencies": {
     "chai": "*",
