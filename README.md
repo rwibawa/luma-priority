@@ -203,7 +203,7 @@ curl -X POST \
   UI is not developed yet.
 
 ### VSCode Debugger
-![NPM Debug](./docs/NPM Debug.jpg)
+![NPM Debug](./docs/NPM%20Debug.jpg)
 
 ## Enhancement Recommendations
 ### 1. Setting configuration.
